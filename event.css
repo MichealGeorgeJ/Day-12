@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 99vw;
+    height: 99vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 5fr;
+    grid-template-areas:
+        "e e e"
+        "t t t"
+        "b b b"
+    ;
+    /* gap:.5rem; */
+    border: 2px solid;
+    margin: 2px;
+}
+
+.event {
+    grid-area: e;
+    /* background-color: maroon; */
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    margin: 1rem 1rem 0 1rem;
+}
+
+.title {
+    grid-area: t;
+    /* background-color: blue; */
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    margin: 1rem 1rem 0 1rem;
+}
+
+.box {
+    grid-area: b;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* background-color: crimson; */
+    grid-template-areas:
+        "i n"
+        "i em"
+        "i ph"
+        "i se"
+        "i na"
+        "i bt"
+    ;
+    border: 2px solid;
+    margin: 1rem 3rem 3rem 3rem;
+
+
+
+}
+
+.img {
+    grid-area: i;
+    width: 20vw;
+    height: 42vh;
+    /* background-color: black; */
+    border: 2px solid;
+    margin: 4vw 0 0 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    grid-area: n;
+
+}
+
+.email {
+    grid-area: em;
+}
+
+.phone {
+    grid-area: ph;
+}
+
+.seats {
+    grid-area: se;
+}
+
+.name2 {
+    grid-area: na;
+}
+
+.btn {
+    grid-area: bt;
+    text-align: center;
+    align-items: center;
+
+
+}
+
+.name,
+.email,
+.phone,
+.seats,
+.name2 {
+    text-align: right;
+    /* background-color: blue; */
+    margin: .6rem;
+    padding: 10px;
+    align-self: center;
+
+
+}
+
+input {
+    line-height: 2rem;
+    border: 2px solid;
+    width: 30vw;
+
+}
+
+#btn1 {
+    background-color: white;
+    border-style: solid;
+    width: 20vw;
+    margin-right: 2rem;
+    height: 2rem;
+    border-radius: 4px;
+
+}
+
+#btn2 {
+    background-color: white;
+    border-style: solid;
+    width: 20vw;
+    margin-left: 2rem;
+    height: 2rem;
+    border-radius: 4px;
+}
+
+.dot {
+
+    align-self: center;
+    text-align: center;
+    height: 33vh;
+    width: 15vw;
+    border: 2px solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@media(max-width:600px) {
+    .box {
+        grid-area: b;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        /* background-color: crimson; */
+        grid-template-areas:
+            "i n"
+            "i em"
+            "i ph"
+            "i se"
+            "i na"
+            "i bt"
+        ;
+        border: 2px solid;
+        margin: 1rem 3rem 3rem 3rem;
+
+
+
+    }
+
+    .img {
+        grid-area: i;
+        width: auto;
+        height: 20vh;
+        /* background-color: black; */
+        border: 2px solid;
+        margin: 4vw 0 0 4vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dot {
+        align-self: center;
+        text-align: center;
+        height: 15vh;
+        border: 2px solid;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .btn {
+        grid-area: bt;
+
+        display: flex;
+        flex-wrap: nowrap;
+        /* text-align: center;
+    align-items: center;
+    justify-content: center; */
+
+
+    }
+
+    #btn1 {
+        background-color: white;
+        border-style: solid;
+        width: 10vh;
+        /* margin-right: 2rem; */
+        height: 2rem;
+        border-radius: 4px;
+
+
+    }
+
+    #btn2 {
+        background-color: white;
+        border-style: solid;
+        width: 10vw;
+        margin-right: 4rem;
+        height: 2rem;
+        border-radius: 4px;
+
+    }
+
+    .container {
+        border: none;
+    }
+
+    .name {
+        grid-area: n;
+        margin-left: 20px;
+
+    }
+
+    .email {
+        margin-left: 20px;
+        grid-area: em;
+    }
+
+    .name,
+    .email,
+    .phone,
+    .seats,
+    .name2 {
+        margin-bottom: 0;
+    }
+}
